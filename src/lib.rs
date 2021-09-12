@@ -227,6 +227,30 @@ extern "C" {
     #[wasm_bindgen(method)]
     pub fn removeLayer(this: &Map, layer: &Layer);
 
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = addLayer)]
+    pub fn removeLayerAsMarker(this: &Map, layer: &Marker);
+
+    /// [`removeLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = removeLayer)]
+    pub fn removeLayerAsPopup(this: &Map, layer: &Popup);
+
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = removeLayer)]
+    pub fn removeLayerAsTooltip(this: &Map, layer: &Tooltip);
+
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = removeLayer)]
+    pub fn removeLayerAsTileLayer(this: &Map, layer: &TileLayer);
+
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = removeLayer)]
+    pub fn removeLayerAsPath(this: &Map, layer: &Path);
+
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method, js_name = removeLayer)]
+    pub fn removeLayerAsPolyline(this: &Map, layer: &Polyline);
+
     /// [`hasLayer`](https://leafletjs.com/reference-1.7.1.html#map-haslayer)
     #[wasm_bindgen(method)]
     pub fn hasLayer(this: &Map, layer: &Layer) -> bool;
