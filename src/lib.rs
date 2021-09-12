@@ -211,6 +211,75 @@ extern "C" {
     #[wasm_bindgen(constructor, js_namespace = L)]
     pub fn new_with_element(el: &HtmlElement, options: &JsValue) -> Map;
 
+    /// [`addControl`](https://leafletjs.com/reference-1.7.1.html#map-addcontrol)
+    #[wasm_bindgen(method)]
+    pub fn addControl(this: &Map, control: &Control);
+
+    /// [`removeControl`](https://leafletjs.com/reference-1.7.1.html#map-removecontrol)
+    #[wasm_bindgen(method)]
+    pub fn removeControl(this: &Map, control: &Control);
+
+    /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
+    #[wasm_bindgen(method)]
+    pub fn addLayer(this: &Map, layer: &Layer);
+
+    /// [`removeLayer`](https://leafletjs.com/reference-1.7.1.html#map-removelayer)
+    #[wasm_bindgen(method)]
+    pub fn removeLayer(this: &Map, layer: &Layer);
+
+    /// [`hasLayer`](https://leafletjs.com/reference-1.7.1.html#map-haslayer)
+    #[wasm_bindgen(method)]
+    pub fn hasLayer(this: &Map, layer: &Layer) -> bool;
+
+    /// [`eachLayer`](https://leafletjs.com/reference-1.7.1.html#map-eachlayer)
+    // TODO: check that this is correct
+    #[wasm_bindgen(method)]
+    pub fn eachLayer(this: &Map, function: &JsValue);
+
+    /// [`eachLayer`](https://leafletjs.com/reference-1.7.1.html#map-eachlayer)
+    #[wasm_bindgen(method, js_name = eachLayer)]
+    pub fn eachLayerWithContext(this: &Map, function: &JsValue, context: &JsValue);
+
+    /// [`openPopup`](https://leafletjs.com/reference-1.7.1.html#map-openpopup)
+    #[wasm_bindgen(method)]
+    pub fn openPopup(this: &Map, popup: &Popup);
+
+    /// [`openPopup`](https://leafletjs.com/reference-1.7.1.html#map-openpopup)
+    #[wasm_bindgen(method, js_name = openPopup)]
+    pub fn openPopupWithContents(this: &Map, content: &JsValue, latlng: &LatLng);
+
+    /// [`openPopup`](https://leafletjs.com/reference-1.7.1.html#map-openpopup)
+    #[wasm_bindgen(method, js_name = openPopup)]
+    pub fn openPopupWithContentsWithOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
+
+    /// [`closePopup`](https://leafletjs.com/reference-1.7.1.html#map-closepopup)
+    #[wasm_bindgen(method)]
+    pub fn closePopup(this: &Map);
+
+    /// [`closePopup`](https://leafletjs.com/reference-1.7.1.html#map-closepopup)
+    #[wasm_bindgen(method, js_name = closePopup)]
+    pub fn closePopupWithPopup(this: &Map, popup: &Popup);
+
+    /// [`openTooltip`](https://leafletjs.com/reference-1.7.1.html#map-opentooltip)
+    #[wasm_bindgen(method)]
+    pub fn openTooltip(this: &Map, tooltip: &Tooltip);
+
+    /// [`openTooltip`](https://leafletjs.com/reference-1.7.1.html#map-opentooltip)
+    #[wasm_bindgen(method, js_name = openTooltip)]
+    pub fn openToolTipWithContent(this: &Map, content: &JsValue, latlng: &LatLng);
+
+    /// [`openTooltip`](https://leafletjs.com/reference-1.7.1.html#map-opentooltip)
+    #[wasm_bindgen(method, js_name = openTooltip)]
+    pub fn openToolTipWithContentWithOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
+
+    /// [`closeTooltip`](https://leafletjs.com/reference-1.7.1.html#map-closetooltip)
+    #[wasm_bindgen(method)]
+    pub fn closeTooltip(this: &Map);
+
+    /// [`closeTooltip`](https://leafletjs.com/reference-1.7.1.html#map-closetooltip)
+    #[wasm_bindgen(method, js_name = closeTooltip)]
+    pub fn closeTooltipWithTooltip(this: &Map, tooltip: &Tooltip);
+
     #[wasm_bindgen(method)]
     pub fn setView(this: &Map, center: &LatLng, zoom: f64);
 
