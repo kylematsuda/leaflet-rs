@@ -228,7 +228,7 @@ extern "C" {
     pub fn removeLayer(this: &Map, layer: &Layer);
 
     /// [`addLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
-    #[wasm_bindgen(method, js_name = addLayer)]
+    #[wasm_bindgen(method, js_name = removeLayer)]
     pub fn removeLayerAsMarker(this: &Map, layer: &Marker);
 
     /// [`removeLayer`](https://leafletjs.com/reference-1.7.1.html#map-addlayer)
