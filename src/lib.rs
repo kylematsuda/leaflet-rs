@@ -274,7 +274,7 @@ extern "C" {
 
     /// [`openPopup`](https://leafletjs.com/reference-1.7.1.html#map-openpopup)
     #[wasm_bindgen(method, js_name = openPopup)]
-    pub fn openPopupWithContentsWithOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
+    pub fn openPopupWithContentsAndOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
 
     /// [`closePopup`](https://leafletjs.com/reference-1.7.1.html#map-closepopup)
     #[wasm_bindgen(method)]
@@ -294,7 +294,7 @@ extern "C" {
 
     /// [`openTooltip`](https://leafletjs.com/reference-1.7.1.html#map-opentooltip)
     #[wasm_bindgen(method, js_name = openTooltip)]
-    pub fn openToolTipWithContentWithOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
+    pub fn openToolTipWithContentAndOptions(this: &Map, content: &JsValue, latlng: &LatLng, options: &JsValue);
 
     /// [`closeTooltip`](https://leafletjs.com/reference-1.7.1.html#map-closetooltip)
     #[wasm_bindgen(method)]
