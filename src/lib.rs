@@ -703,6 +703,9 @@ extern "C" {
     #[wasm_bindgen(method)]
     pub fn addTo(this: &TileLayer, map: &Map);
 
+    #[wasm_bindgen(method)]
+    pub fn on(this: &TileLayer, kind: &str, handler: &JsValue);
+
     // Control
 
     #[derive(Debug)]
